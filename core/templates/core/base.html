@@ -6,187 +6,229 @@
 
     {% load static %}
 
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* === ESTILOS ELEGANTES PARA LOGIN Y REGISTRO === */
+        /* =========================================
+           1. ESTILOS DEL HEADER (ENCABEZADO) - NUEVO
+           ========================================= */
+        
+        .site-header {
+            background-color: #1a1a1a; /* Negro suave, no puro */
+            padding: 40px 20px;
+            border-bottom: 1px solid #333;
+        }
 
-/* 1. Fondo y Contenedor */
-.auth-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh; /* Ocupa casi toda la pantalla */
-    background-color: #f9f9f9; /* Fondo muy suave */
-    padding: 20px;
-}
+        .header-logo {
+            width: 120px;          /* Tamaño controlado del logo */
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;    /* Lo hace redondo */
+            border: 3px solid #ffffff00; /* Borde blanco fino y elegante */
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(255,255,255,0.1); /* Brillo suave detrás */
+        }
 
-.auth-card {
-    background: white;
-    width: 100%;
-    max-width: 420px; /* Tarjeta compacta */
-    padding: 40px;
-    border-radius: 8px; /* Bordes ligeramente redondeados */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra muy sutil y elegante */
-    text-align: center;
-    border: 1px solid #eaeaea;
-}
+        .site-title {
+            font-family: 'Dancing Script', cursive; /* LA FUENTE BONITA */
+            font-size: 3.5rem;      /* Tamaño grande */
+            color: #fff;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para leer mejor */
+        }
 
-/* 2. Tipografía */
-.auth-title {
-    font-family: 'Dancing Script', cursive; /* Tu fuente de firma */
-    font-size: 2.5rem;
-    color: #222;
-    margin-bottom: 10px;
-}
+        .site-subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;       /* Letra fina */
+            text-transform: uppercase; /* Todo mayúsculas para elegancia */
+            letter-spacing: 4px;    /* Letras separadas (muy usado en arte/moda) */
+            font-size: 0.9rem;
+            color: #aaa;            /* Gris claro */
+            margin-top: 5px;
+        }
 
-.auth-subtitle {
-    font-family: 'Roboto', sans-serif;
-    color: #777;
-    font-size: 0.95rem;
-    margin-bottom: 30px;
-}
+        /* =========================================
+           2. ESTILOS ELEGANTES PARA LOGIN Y REGISTRO
+           ========================================= */
 
-/* 3. Campos de Texto (Inputs) */
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
+        /* Fondo y Contenedor */
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
 
-.form-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: block;
-    margin-bottom: 5px;
-}
+        .auth-card {
+            background: white;
+            width: 100%;
+            max-width: 420px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #eaeaea;
+        }
 
-.form-control-art {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fafafa;
-    transition: all 0.3s ease;
-}
+        /* Tipografía Auth */
+        .auth-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #222;
+            margin-bottom: 10px;
+        }
 
-.form-control-art:focus {
-    background-color: white;
-    border-color: #333; /* Se pone negro elegante al escribir */
-    outline: none;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
+        .auth-subtitle {
+            font-family: 'Roboto', sans-serif;
+            color: #777;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
 
-/* 4. Botones */
-.btn-art {
-    width: 100%;
-    padding: 12px;
-    background-color: #222; /* Negro elegante en vez de azul chillón */
-    color: white;
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background 0.3s;
-    margin-top: 10px;
-}
+        /* Campos de Texto (Inputs) */
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
 
-.btn-art:hover {
-    background-color: #444; /* Gris oscuro al pasar el mouse */
-}
+        .form-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 5px;
+        }
 
-/* 5. Enlaces (Olvidé contraseña, etc) */
-.auth-links {
-    margin-top: 25px;
-    font-size: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
+        .form-control-art {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fafafa;
+            transition: all 0.3s ease;
+        }
 
-.auth-links a {
-    color: #666;
-    text-decoration: none;
-    transition: color 0.2s;
-}
+        .form-control-art:focus {
+            background-color: white;
+            border-color: #333;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
 
-.auth-links a:hover {
-    color: #000;
-    text-decoration: underline;
-}
+        /* Botones */
+        .btn-art {
+            width: 100%;
+            padding: 12px;
+            background-color: #222;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-art:hover {
+            background-color: #444;
+        }
+
+        /* Enlaces */
+        .auth-links {
+            margin-top: 25px;
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .auth-links a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .auth-links a:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+        
+        /* Ajustes al Navbar */
+        .navbar-brand {
+            font-family: 'Dancing Script', cursive;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Banner -->
-    <header class="bg-dark text-white text-center p-4">
-        <img src="{% static 'core/logo.png' %}" alt="Logo Arte de Cristian Erre">
-        <h1>Arte de Cristian Erre</h1>
-        <p>Arte que inspira emociones</p>
+    <header class="site-header text-center">
+        <img src="{% static 'core/logo.png' %}" alt="Logo Cristian Erre" class="header-logo">
+        
+        <h1 class="site-title">Arte de Cristian Erre</h1>
+        <p class="site-subtitle">Arte que inspira emociones</p>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="/">Inicio</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="/">CE</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+          
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="/quienes">Quién soy</a></li>
+            <li class="nav-item"><a class="nav-link" href="/preguntas">Preguntas Frecuentes</a></li>
+            <li class="nav-item"><a class="nav-link" href="/galeria">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
 
-    <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
-      
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="/quienes">Quién soy</a></li>
-        <li class="nav-item"><a class="nav-link" href="/preguntas">Preguntas Frecuentes</a></li>
-        <li class="nav-item"><a class="nav-link" href="/galeria">Galería</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
+                        {% if user.is_staff %}
+                          <li class="nav-item ms-3"> 
+                              <a class="nav-link btn **btn-outline-dark** btn-sm px-3 fw-bold" href="{% url 'agregar_obra' %}" style="border-radius: 20px;">
+                                  + Gestionar Obras
+                              </a>
+                          </li>
+                      {% endif %}
+                      </ul>
 
-        {% if user.is_staff %}
-            <li class="nav-item ms-3"> <a class="nav-link btn btn-outline-success btn-sm fw-bold" href="{% url 'agregar_obra' %}">
-                    + Agregar Obra
-                </a>
-            </li>
-        {% endif %}
-        </ul>
-
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        {% if user.is_authenticated %}
-          <li class="nav-item"><span class="nav-link">Hola, {{ user.username }}</span></li>
-          <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Cerrar sesión</a></li>
-        {% else %}
-          <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a></li>
-          <li class="nav-item"><a class="nav-link" href="{% url 'registro' %}">Registrarse</a></li>
-        {% endif %}
-      </ul>
-    </div>
-  </div>
-</nav>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            {% if user.is_authenticated %}
+              <li class="nav-item"><span class="nav-link fst-italic">Hola, {{ user.username }}</span></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Cerrar sesión</a></li>
+            {% else %}
+              <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'registro' %}">Registrarse</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 
-    <!-- Contenido -->
-    <main class="container my-4">
+    <main class="container my-5">
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center p-3">
-        <p>&copy; 2025 Arte de Cristian Erre</p>
-        <a href="https://www.instagram.com/cristian_erre" target="_blank">Instagram</a> |
-        <a href="https://www.facebook.com/errecristian/about" target="_blank">Facebook</a> |
+    <footer class="bg-dark text-white text-center p-4 mt-5">
+        <p class="mb-2" style="font-family: 'Dancing Script', cursive; font-size: 1.2rem;">&copy; 2025 Arte de Cristian Erre</p>
+        <div class="small text-secondary">
+            <a href="https://www.instagram.com/cristian_erre" target="_blank" class="text-white text-decoration-none mx-2">Instagram</a> |
+            <a href="https://www.facebook.com/errecristian/about" target="_blank" class="text-white text-decoration-none mx-2">Facebook</a>
+        </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

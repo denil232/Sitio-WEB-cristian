@@ -129,3 +129,9 @@ EMAIL_HOST_USER = 'desarrowebcristian@gmail.com'
 # AQUÍ VA LA "CONTRASEÑA DE APLICACIÓN" DE GOOGLE (NO TU CONTRASEÑA NORMAL)
 EMAIL_HOST_PASSWORD = 'dsuw jyiq amgx yiyi' 
 DEFAULT_FROM_EMAIL = 'Galería Cristian Erre <noreply@galeriacristianerre.com>'
+
+# Habilitar el login con Email o Usuario
+AUTHENTICATION_BACKENDS = [
+    'core.backends.EmailBackend',                # 1. Primero intenta nuestro método (Email/Usuario)
+    'django.contrib.auth.backends.ModelBackend', # 2. Respaldo por defecto
+]

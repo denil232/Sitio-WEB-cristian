@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    
+    <h2>Gestionar Obra</h2>
+    
+    <form method="POST" enctype="multipart/form-data">
+        
+        {% csrf_token %}
+
+        <div class="campos-formulario">
+            {{ form.as_p }}
+        </div>
+
+        <br>
+        
+        <button type="submit" class="btn btn-success">Guardar Cambios</button>
+        
+        <a href="{% url 'galeria' %}" class="btn btn-secondary">Cancelar</a>
+
+    </form>
+</div>
+
+{% endblock %}

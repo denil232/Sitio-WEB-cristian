@@ -1,0 +1,162 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Contacto - Arte de Cristian Erré{% endblock %}
+
+{% block content %}
+<section class="contact-section">
+    <div class="contact-card">
+        <h2 class="contact-title">Ponte en contacto</h2>
+        <p class="contact-subtitle">Si deseas una obra personalizada, colaboración o mural, ¡escríbeme!</p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone-alt contact-icon"></i>
+                <span class="contact-text">+56 9 8278 8848</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-envelope contact-icon"></i>
+                <a href="mailto:holacristianerre@gmail.com" class="contact-link">
+                    holacristianerre@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <span class="contact-text">Concepción, Chile</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 🎨 Estilos -->
+<style>
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: linear-gradient(135deg, #f3f3f3, #fff);
+    padding: 60px 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 45px 50px;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.contact-title {
+    font-size: 2.3rem;
+    color: #222;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.contact-subtitle {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    font-size: 1.05rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.05);
+}
+
+.contact-icon {
+    color: #d84c3f;
+    font-size: 1.4rem;
+    animation: pulse 1.8s infinite;
+}
+
+.contact-link {
+    color: #d84c3f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.instagram { background: linear-gradient(45deg, #feda75, #d84c3f, #962fbf); }
+.facebook { background: #1877f2; }
+.whatsapp { background: #25d366; }
+
+.social-icon:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .contact-card {
+        padding: 30px 25px;
+    }
+    .contact-title {
+        font-size: 1.9rem;
+    }
+}
+</style>
+
+<!-- Font Awesome (para los íconos) -->
+<script src="https://kit.fontawesome.com/a2d9d5c6f5.js" crossorigin="anonymous"></script>
+{% endblock %}

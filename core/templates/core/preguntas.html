@@ -1,0 +1,94 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Preguntas Frecuentes - Cristian Erré{% endblock %}
+
+{% block content %}
+<section class="faq-section">
+    <h2 class="faq-title">Preguntas Frecuentes</h2>
+    <p class="faq-intro">
+        Aquí encontrarás respuestas a las dudas más comunes sobre mi trabajo, encargos y procesos artísticos.
+        Si tienes otra pregunta, no dudes en contactarme directamente.
+    </p>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <h3>¿Realizas envíos de obras?</h3>
+            <p>Por ahora no, mas adelante se podria hacer.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Aceptas encargos personalizados?</h3>
+            <p>Sí, trabajo encargos únicos en óleo, acrílico y técnicas mixtas, adaptándome al estilo e idea que cada cliente desee plasmar.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Dónde se pueden ver tus murales?</h3>
+            <p>Algunos de mis murales se encuentran en diversos puntos de <strong>Concepción</strong> y forman parte del colectivo <strong>Perfecto Distingo</strong>.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Qué medios de pago aceptas?</h3>
+            <p>Acepto pagos con <strong>tarjeta de débito</strong>, <strong>crédito</strong> y <strong>efectivo</strong>.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+.faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.faq-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.faq-intro {
+    text-align: center;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.faq-item {
+    background-color: #fafafa;
+    border-left: 5px solid #d84c3f;
+    padding: 20px 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-3px);
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+}
+</style>
+{% endblock %}

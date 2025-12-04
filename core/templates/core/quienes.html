@@ -1,0 +1,116 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Quién Soy - Cristian Erré{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-text">
+            <h2 class="about-title">Sobre mí</h2>
+            <p>
+                Soy <strong>Cristián Erré</strong>, artista visual y muralista chileno originario de <strong>Concepción</strong>. 
+                Mi trabajo busca conectar lo cotidiano con lo natural, transformando muros y espacios en lugares llenos de vida, textura y expresión.
+            </p>
+
+            <p>
+                A través de mis obras, exploro la fuerza del color, el movimiento y las formas orgánicas, utilizando paletas que van desde los tonos neutros —como ocre, blanco y negro— hasta mezclas más vibrantes que reflejan la energía de cada entorno.
+            </p>
+
+            <p>
+                He realizado intervenciones en distintos puntos de la ciudad, tanto en espacios públicos como privados, colaborando con locales, estudios y proyectos comunitarios. 
+                También desarrollo obras personalizadas para hogares y negocios, llevando el arte mural a cada rincón posible.
+            </p>
+
+            <p class="about-quote">
+                <em>“Mi propósito es llenar los espacios de identidad, emoción y arte, invitando a las personas a convivir con lo visual todos los días.”</em>
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="{% static 'core/imagen1disponible.png' %}" alt="Cuadro Gigante" class="img-fluid rounded shadow">
+        </div>
+    </div>
+</section>
+
+<style>
+.about-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1 1 500px;
+}
+
+.about-title {
+    font-size: 2.3rem;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    border-left: 6px solid #d84c3f;
+    padding-left: 12px;
+}
+
+.about-text p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.about-quote {
+    font-size: 1.05rem;
+    color: #222;
+    margin-top: 25px;
+    border-left: 4px solid #d84c3f;
+    padding-left: 12px;
+}
+
+.about-image {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.about-image img {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .about-image {
+        margin-top: 20px;
+    }
+}
+</style>
+
+{% endblock %}

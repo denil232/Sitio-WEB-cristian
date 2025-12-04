@@ -118,3 +118,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Al final del archivo settings.py pega esto:
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Configuración de Email (Ejemplo con Gmail)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+# Tu dirección de correo real de Gmail
+EMAIL_HOST_USER = 'desarrowebcristian@gmail.com' 
+# AQUÍ VA LA "CONTRASEÑA DE APLICACIÓN" DE GOOGLE (NO TU CONTRASEÑA NORMAL)
+EMAIL_HOST_PASSWORD = 'dsuw jyiq amgx yiyi' 
+DEFAULT_FROM_EMAIL = 'Galería Cristian Erre <noreply@galeriacristianerre.com>'
